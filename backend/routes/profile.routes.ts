@@ -26,6 +26,7 @@ router.get('/student', async (req: any, res: any) => {
       return res.status(401).json({ success: false, message: 'Unauthorized' });
     }
     
+    // Note: ProfileService needs to be imported or available in scope here
     let profile = await ProfileService.getUserProfile(userId);
     
     // If profile doesn't exist, create a default one
@@ -257,5 +258,3 @@ router.put('/student', async (req: any, res: any) => {
 });
 
 export default router;
-
-

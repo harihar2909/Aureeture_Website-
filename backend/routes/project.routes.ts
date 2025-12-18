@@ -20,6 +20,3 @@ router.post('/:id/join', joinProject);
 router.get('/me', getUserProjects);
 
 export default router;
-
-
-
